@@ -24,7 +24,7 @@ import { Loader2 } from 'lucide-react';
 import { constants } from 'buffer';
 import SignIn from '@/app/(auth)/sign-in/page';
 import { useRouter } from 'next/navigation';
-import { signIn, signUp } from '@/lib/actions/user.actions';
+import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
 
 export const formSchema = z.object({
     email: z.string().email(),
@@ -34,6 +34,7 @@ const AuthForm = ({type}: {type: string}) => {
     const router = useRouter();
     const [user, setUser] = useState(null);
     const [isLoading, setisLoading] = useState(false);
+   
 
     const formSchema = authFormSchema(type);
 
@@ -60,7 +61,7 @@ const AuthForm = ({type}: {type: string}) => {
 
             if(type === 'sign-in'){
                 const response = await signIn({
-                      email: data.email,
+                    email: data.email,
                     password: data.password,
                 })
 
