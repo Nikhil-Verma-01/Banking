@@ -62,7 +62,7 @@ const MoblieNavbar = ({user}: MobileNavProps) => {
                         </nav>
                     </SheetClose>
 
-                    <Footer user={user}/>
+                    <Footer user={user} type='moblie'/>
                 </div>
                 
             </SheetContent>
