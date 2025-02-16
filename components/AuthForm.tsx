@@ -25,6 +25,7 @@ import { constants } from 'buffer';
 import SignIn from '@/app/(auth)/sign-in/page';
 import { useRouter } from 'next/navigation';
 import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
+import PlaidLink from './PlaidLink';
 
 export const formSchema = z.object({
     email: z.string().email(),
@@ -107,7 +108,7 @@ const AuthForm = ({type}: {type: string}) => {
         </header>
         {user ? (
             <div className='flex flex-col gap-4'>
-                {/* PlaidLink */}
+                {/* <PlaidLink/> */}
             </div>
             ) : (
             <>
