@@ -9,8 +9,8 @@ const BankCard = ({account, userName, showBalance=true}: CreditCardProps) => {
         <Link href={`/transaction-history/?id=${account.appwriteItemId}`} className='bank-card'>
             <div className='bank-card_content'>
                 <div>
-                    <h1>
-                        {userName}
+                    <h1 className='text-16 font-semibold text-white'>
+                        {account.name}
                     </h1>
                 </div>
 

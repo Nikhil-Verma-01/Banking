@@ -9,7 +9,7 @@ import {
   TransferType,
 } from "plaid";
 
-import { plaidClient } from "../plaid.config";
+import { plaidClient } from "../plaid";
 import { parseStringify } from "../utils";
 
 import { getTransactionsByBankId } from "./transaction.actions";
